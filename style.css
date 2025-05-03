@@ -1,0 +1,214 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Game container */
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Canvas */
+#gameCanvas {
+    background-color: #222;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Game UI */
+#game-ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#health-bar {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #fff;
+}
+
+#health-value {
+    height: 100%;
+    width: 100%;
+    background-color: #ff3333;
+    transition: width 0.3s;
+}
+
+#health-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#money {
+    font-size: 24px;
+    font-weight: bold;
+    color: #33cc33;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+#wanted-level {
+    font-size: 24px;
+}
+
+.star {
+    color: #999;
+    margin-right: 3px;
+}
+
+.star.active {
+    color: #f1c40f;
+}
+
+#ammo {
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#mission-info {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-left: 4px solid #f1c40f;
+    margin-top: 15px;
+    max-width: 400px;
+    display: none;
+}
+
+/* Controls info */
+#controls-info {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#controls-info p {
+    margin: 5px 0;
+}
+
+/* Game Menu */
+#game-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+
+#game-menu h1 {
+    font-size: 72px;
+    margin-bottom: 40px;
+    color: #ff3333;
+    text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.6);
+    letter-spacing: 4px;
+}
+
+#game-menu button, #game-over button {
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 18px;
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+#game-menu button:hover, #game-over button:hover {
+    background-color: #cc0000;
+}
+
+#control-instructions {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 400px;
+}
+
+#control-instructions h2 {
+    margin-bottom: 15px;
+    color: #ff3333;
+}
+
+#control-instructions p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Game Over Screen */
+#game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+
+#game-over h2 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    color: #ff3333;
+    text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.6);
+}
+
+#game-over p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
